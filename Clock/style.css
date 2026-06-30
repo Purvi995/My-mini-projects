@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(155, 15, 15, 0.897);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.clock_container{
+    text-align: center;
+    background: white;
+    padding: 50px 100px;
+    border-radius: 200px;
+    box-shadow: 0 0 16px white ;
+}
+
+h1{
+    color: rgb(5, 41, 5);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+#clock{
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: rgb(70, 53, 47);
+}
+
+#date{
+    margin: 15px;
+    color: rgb(176, 11, 11);
+    font-size: 20px;
+}
+

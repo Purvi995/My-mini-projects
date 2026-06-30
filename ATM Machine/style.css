@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background: #c1bcb7;
+    /*background: linear-gradient(135deg,#1e3c72,#2a5298);*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* ATM BODY */
+
+.atm{
+    width:380px;
+    height:500px;
+    background:#f4f6f9;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 15px 30px;
+    text-align:center;
+    border:5px solid #f5eeee;
+}
+
+
+/* HEADER */
+
+h2{
+    background:#111;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:35px;
+    letter-spacing:2px;
+}
+
+
+/* BALANCE */
+
+p{
+    font-size:18px;
+    margin:20px;
+    color:#333;
+    font-weight:bold;
+}
+
+#balance{
+    color:#008000;
+    font-size:25px;
+}
+
+
+/* INPUT */
+
+input{
+    width:85%;
+    height:45px;
+    border-radius:10px;
+    border:2px solid #aaa;
+    padding:10px;
+    font-size:16px;
+    outline:none;
+}
+
+
+input:focus{
+    border-color:#2a5298;
+}
+
+
+/* BUTTONS */
+
+button{
+
+    width:130px;
+    height:50px;
+    margin:20px 5px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+/* DEPOSIT */
+
+.deposit{
+    background:#19a463;
+    color:white;
+}
+
+
+.deposit:hover{
+    background:#087a45;
+    transform:scale(1.05);
+}
+
+
+
+/* WITHDRAW */
+
+.withdraw{
+    background:#e63946;
+    color:white;
+}
+
+
+.withdraw:hover{
+    background:#a4161a;
+    transform:scale(1.05);
+}
+
+
+
+/* MESSAGE */
+
+#message{
+    margin-top:20px;
+    color:#333;
+    font-size:16px;
+}
+

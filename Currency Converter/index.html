@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Currency Converter</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Arial,sans-serif;
+}
+
+
+body{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background:
+    linear-gradient(135deg,#667eea,#764ba2);
+
+}
+
+
+/* Card */
+
+.container{
+
+    width:420px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.15);
+
+    border:2px solid rgba(255,255,255,0.3);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.4);
+
+    text-align:center;
+
+}
+
+
+
+h1{
+
+    color:white;
+
+    margin-bottom:25px;
+
+    font-size:38px;
+
+}
+
+
+
+/* Labels */
+
+label{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* Inputs */
+
+input,select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    font-size:17px;
+
+}
+
+
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(45deg,#ff512f,#dd2476);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Result */
+
+#result{
+
+    margin-top:25px;
+
+    background:white;
+
+    color:#764ba2;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Currency Converter</h1>
+
+
+<label>Amount</label>
+
+<input 
+type="number" 
+id="amount" 
+placeholder="Enter amount">
+
+
+
+<label>From</label>
+
+<select id="from">
+
+<option value="USD">USD</option>
+<option value="INR">INR</option>
+<option value="EUR">EUR</option>
+
+</select>
+
+
+
+<label>To</label>
+
+<select id="to">
+
+<option value="INR">INR</option>
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+
+</select>
+
+
+
+
+<button onclick="convertCurrency()">
+
+Convert
+
+</button>
+
+
+
+<h3 id="result">
+Result will appear here
+</h3>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function convertCurrency(){
+
+
+let amount =
+Number(document.getElementById("amount").value);
+
+
+let from =
+document.getElementById("from").value;
+
+
+let to =
+document.getElementById("to").value;
+
+
+
+let rate = 1;
+
+
+
+// conversion rates
+
+if(from=="USD" && to=="INR")
+{
+    rate = 83;
+}
+
+
+else if(from=="INR" && to=="USD")
+{
+    rate = 1/83;
+}
+
+
+else if(from=="EUR" && to=="INR")
+{
+    rate = 90;
+}
+
+
+else if(from=="INR" && to=="EUR")
+{
+    rate = 1/90;
+}
+
+
+else if(from=="USD" && to=="EUR")
+{
+    rate = 0.92;
+}
+
+
+else if(from=="EUR" && to=="USD")
+{
+    rate = 1.08;
+}
+
+
+else{
+
+    rate = 1;
+
+}
+
+
+
+let result = amount * rate;
+
+
+
+document.getElementById("result").innerHTML =
+
+amount+" "+from+
+" = "+
+result.toFixed(2)+" "+to;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
